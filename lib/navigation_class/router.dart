@@ -7,6 +7,7 @@ import 'package:flutter_design_pattern_example/screens/design_pattern_details/de
 import 'package:flutter_design_pattern_example/screens/main_menu/main_menu.dart';
 import 'package:flutter_design_pattern_example/utilities/app_constants.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/introduction/introduction.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/singleton/singleton_example.dart';
 
 // The class where all the routes are define for the app
 class Router {
@@ -31,11 +32,28 @@ class Router {
             example: Introduction(),
           ),
         );
-
+      case DesignPatternRoutes.singletonRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          SingletonExample(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => MainMenu(),
         );
     }
+  }
+
+  static MaterialPageRoute _buildDesignPatternDetailsPageRoute(
+    RouteSettings settings,
+    Widget example,
+  ) {
+    var designPattern = settings.arguments as DesignPattern;
+    return MaterialPageRoute(
+      builder: (_) => DesignPatternDetails(
+        designPattern: designPattern,
+        example: example,
+      ),
+    );
   }
 }

@@ -202,7 +202,8 @@ class _DesignPatternDetailsState extends State<DesignPatternDetails>
                                       repository.get(widget.designPattern.id),
                                   initialData: "",
                                   builder: (_, AsyncSnapshot<String> snapshot) {
-                                    if (snapshot.hasData) {
+                                    if (snapshot.hasData &&
+                                        snapshot.data != "") {
                                       return MarkdownBody(
                                         data: snapshot.data,
                                       );
