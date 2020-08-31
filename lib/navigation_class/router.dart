@@ -10,6 +10,7 @@ import 'package:flutter_design_pattern_example/utilities/widgets/adapter/adapter
 import 'package:flutter_design_pattern_example/utilities/widgets/composite/composite_example.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/introduction/introduction.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/singleton/singleton_example.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/strategy/strategy_example.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/template_method/template_method_example.dart';
 
 // The class where all the routes are define for the app
@@ -54,6 +55,11 @@ class Router {
         return _buildDesignPatternDetailsPageRoute(
           routeSettings,
           CompositeExample(),
+        );
+      case DesignPatternRoutes.strategyRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          StrategyExample(),
         );
       default:
         return MaterialPageRoute(

@@ -5,4 +5,5 @@ class DesignPatternRoutes {
   static const String adapterRoute = '/adapter';
   static const String templateMethodRoute = '/template-method';
   static const String compositeRioute = '/composite';
+  static const String strategyRoute = '/strategy';
 }
