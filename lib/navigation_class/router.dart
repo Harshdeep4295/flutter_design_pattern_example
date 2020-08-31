@@ -9,6 +9,7 @@ import 'package:flutter_design_pattern_example/utilities/app_constants.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/adapter/adapter_example.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/introduction/introduction.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/singleton/singleton_example.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/template_method/template_method_example.dart';
 
 // The class where all the routes are define for the app
 class Router {
@@ -42,6 +43,11 @@ class Router {
         return _buildDesignPatternDetailsPageRoute(
           routeSettings,
           AdapterExample(),
+        );
+      case DesignPatternRoutes.templateMethodRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          TemplateMethodExample(),
         );
       default:
         return MaterialPageRoute(
