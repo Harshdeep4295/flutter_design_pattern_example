@@ -7,6 +7,7 @@ import 'package:flutter_design_pattern_example/screens/design_pattern_details/de
 import 'package:flutter_design_pattern_example/screens/main_menu/main_menu.dart';
 import 'package:flutter_design_pattern_example/utilities/app_constants.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/adapter/adapter_example.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/composite/composite_example.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/introduction/introduction.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/singleton/singleton_example.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/template_method/template_method_example.dart';
@@ -48,6 +49,11 @@ class Router {
         return _buildDesignPatternDetailsPageRoute(
           routeSettings,
           TemplateMethodExample(),
+        );
+      case DesignPatternRoutes.compositeRioute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          CompositeExample(),
         );
       default:
         return MaterialPageRoute(
