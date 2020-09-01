@@ -7,8 +7,13 @@ import 'package:flutter_design_pattern_example/screens/design_pattern_details/de
 import 'package:flutter_design_pattern_example/screens/main_menu/main_menu.dart';
 import 'package:flutter_design_pattern_example/utilities/app_constants.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/adapter/adapter_example.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/composite/composite_example.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/facade/facade_example.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/introduction/introduction.dart';
 import 'package:flutter_design_pattern_example/utilities/widgets/singleton/singleton_example.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/state/state_example.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/strategy/strategy_example.dart';
+import 'package:flutter_design_pattern_example/utilities/widgets/template_method/template_method_example.dart';
 
 // The class where all the routes are define for the app
 class Router {
@@ -42,6 +47,31 @@ class Router {
         return _buildDesignPatternDetailsPageRoute(
           routeSettings,
           AdapterExample(),
+        );
+      case DesignPatternRoutes.templateMethodRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          TemplateMethodExample(),
+        );
+      case DesignPatternRoutes.compositeRioute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          CompositeExample(),
+        );
+      case DesignPatternRoutes.strategyRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          StrategyExample(),
+        );
+      case DesignPatternRoutes.stateRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          StateExample(),
+        );
+      case DesignPatternRoutes.facadeRoute:
+        return _buildDesignPatternDetailsPageRoute(
+          routeSettings,
+          FacadeExample(),
         );
       default:
         return MaterialPageRoute(
