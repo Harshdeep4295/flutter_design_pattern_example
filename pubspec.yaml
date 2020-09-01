@@ -52,6 +52,9 @@ flutter:
     - assets/markdown/
     - assets/images/singleton/
     - assets/images/adapter/
+    - assets/images/state/
+    - assets/images/strategy/
+    - assets/images/facade/
   fonts:
     - family: Roboto
       fonts:
