@@ -7,4 +7,5 @@ class DesignPatternRoutes {
   static const String compositeRioute = '/composite';
   static const String strategyRoute = '/strategy';
   static const String stateRoute = '/state';
+  static const String facadeRoute = '/facade';
 }
